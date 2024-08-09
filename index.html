@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiba's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #EDE7F6, #D1C4E9);
+        }
+
+        /* Navigation Bar */
+        header {
+            background: linear-gradient(90deg, #4B0082, #6A0DAD);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #6A0DAD, #8E44AD);
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Section */
+        #about {
+            padding: 10px 40px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #about h2 {
+            font-size: 36px;
+            color: #4B0082;
+            margin-bottom: 40px;
+        }
+
+        #about p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+
+        /* About Photo */
+        .about-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #6A0DAD; /* Border color */
+            transition: transform 0.3s ease; /* Smooth scaling transition */
+        }
+
+.about-photo:hover {
+    transform: scale(1.1); /* Scale the photo up by 10% on hover */
+}
+
+        /* Skills Section */
+        #skills {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 36px;
+            color: #4B0082;
+            margin-bottom: 40px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 30px;
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #4B0082;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-category ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 10px 20px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #projects h2 {
+            font-size: 36px;
+            color: #4B0082;
+            margin-bottom: 40px;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .project-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 40px;
+            width: 250px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-item h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #4B0082;
+        }
+
+        .project-item p {
+            font-size: 16px;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .project-item a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #6A0DAD;
+            text-decoration: none;
+            font-size: 16px;
+            border: 2px solid #6A0DAD;
+            padding: 2px 2px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .project-item a:hover {
+            background-color: #430e68;
+            color: #fff;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #6A0DAD, #8E44AD);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #EDE7F6;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth scaling */
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #EDE7F6;
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4B0082;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <h1>Amel Hiba HADJIEDJ</h1>
+        <p> Welcome to my Portfolio !!</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="images/my picture.jpg" alt="Photo" class="about-photo">
+        <p>
+            Hello! I'm Hiba, I'm a third-year Computer Science student at USTHB, primarily oriented towards web development (both back-end and front-end). In addition to my academic pursuits, I have a keen interest in logistics and event management and learning languages.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>C</li>
+                    <li>SQL</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Express.js</li>
+                    <li>Django</li>
+                    <li>PrimeFaces</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>github</li>
+                    <li>VS Code</li>
+                    <li>Netbeans</li>
+                    <li>Code Blocks</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>SQLite3</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Leadership</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Arabic</li>
+                    <li>English</li>
+                    <li>French</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Others</h3>
+                <ul>
+                    <li>Microsoft Office</li>
+                    <li>Canva</li>
+                    <li>Figma</li>
+                    <li>CapCut</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <a href="#img1">
+                   <img src="images/1st project.png" alt="Project 1">
+                </a>
+                <h3>Medical Office management Software</h3>
+                <p>
+                    A software solution for medical offices. Designed to automate administrative tasks, improve the management of appointments and medical files, and facilitate access to relevant information. The result is a better experience for both reception workers and doctors. It was built using JAVA (JEE), PrimeFaces, Payara server and MySQL.
+                </p>
+                <a href="https://github.com/hibahadj/Medical-Office-Software-Project.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <a href="#img2">
+                    <img src="images/game.png" alt="Project 2">
+               </a>
+                <h3>SDL Memory Game</h3>
+                <p>
+                    A memory game where a player predicts a ball's path on a grid with diagonals that alter its trajectory. The player must remember the orientation of the diagonals before the machine erases them. The game is coded in C using the SDL library and includes features like menu, multiple levels, scoring, and modes for both player and machine gameplay.
+                </p>
+                <a href="https://github.com/hibahadj/SDL-MEMORY-GAME.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <a href="#img3">
+                   <img src="images/Cpa.png" alt="Project 3">
+                </a>
+                <h3>Bank Transactions Web Application</h3>
+                <p>
+                    Web application for "Crédit Populaire d'Algérie" to manage clients accounts, transactions. It includes features for accounts management, transaction processing, and credit history tracking. It provides an admin interface for clients and accounts, and ensures secure authentication for both clients and admins. Dveloped using Django Framework, Bootstrap, SQLite3."
+                </p>
+                <a href="https://github.com/hibahadj/BankTransactions.git" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Enlarged Images -->
+    <div id="img1" class="lightbox">
+        <img src="images/1st project.png" alt="Project 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <img src="images/game.png" alt="Project 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <img src="images/Cpa.png" alt="Project 3">
+    </div>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:hadjiedjhiba92@gmail.com">hadjiedjhiba92@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+213555215391">+213 555 21 53 91</a></p>
+            <p><strong>Address:</strong> Bach-Djerrah, Algiers, ALGERIA</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/hibahadj" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/amel-hiba-hadjiedj" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Dimashiba" target="_blank" title="Twitter"><i class="fab fa-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100010620817619" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/kim_hiba_92" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amel Hiba HADJIEDJ. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
